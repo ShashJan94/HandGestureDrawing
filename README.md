@@ -1,19 +1,18 @@
-Hand Gesture Drawing Application
-This is a Python-based application that enables users to draw on a canvas using hand gestures detected via a webcam. The application utilizes Mediapipe for hand tracking, Kalman filters for smoothing movements, and Tkinter for the GUI.
+A Python-based application that enables users to draw on a canvas using hand gestures detected via a webcam. The application utilizes Mediapipe for hand tracking, Kalman filters for smoothing movements, and Tkinter for the GUI.
 
 Features
-Real-time Hand Tracking: The application uses Mediapipe to detect and track hand landmarks in real-time.
-Drawing with Gestures: Draw on the canvas by bringing your index finger and thumb close together. The distance between the two fingers determines whether the system is in drawing mode or erasing mode.
-Kalman Filter Smoothing: To enhance the accuracy and stability of drawing, the application applies a Kalman filter to the hand positions.
-Interpolation for Smooth Lines: The application interpolates between hand positions to prevent breaks in lines due to frame drops or quick movements.
-Erasing: Erase parts of the drawing by using a specific hand gesture (usually a closed fist or a gesture where the index finger and thumb are far apart).
-UI Notifications: The application provides real-time feedback when the hand is out of frame or when certain gestures are detected.
+Real-time Hand Tracking: Utilizes Mediapipe to detect and track hand landmarks in real-time.
+Drawing with Gestures: Draw on the canvas by bringing your index finger and thumb close together. The distance between the two fingers determines whether the system is in drawing or erasing mode.
+Kalman Filter Smoothing: Applies a Kalman filter to the hand positions to enhance accuracy and stability.
+Interpolation for Smooth Lines: Prevents breaks in lines due to frame drops or quick movements by interpolating between hand positions.
+Erasing Mode: Erase parts of the drawing using a specific hand gesture (e.g., closed fist or wide separation between thumb and index finger).
+UI Notifications: Provides real-time feedback when the hand is out of frame or when certain gestures are detected.
 Installation
 Prerequisites
 Python 3.7 or higher
 A webcam
 Dependencies
-The application requires several Python libraries, which can be installed using pip:
+Install the required Python libraries using pip:
 
 bash
 Copy code
@@ -23,8 +22,8 @@ Clone the Repository
 
 bash
 Copy code
-git clone https://github.com/ShashJan94/HandGestureDrawing
-cd hand-gesture-drawing
+git clone https://github.com/ShashJan94/HandGestureDrawing.git
+cd HandGestureDrawing
 Run the Application
 
 bash
@@ -36,27 +35,35 @@ Usage
 Basic Controls
 Drawing:
 
-To start drawing, position your hand so that the index finger and thumb are close together. The system will recognize this as the drawing gesture.
+Position your hand so that the index finger and thumb are close together. The system will recognize this as the drawing gesture.
 Move your hand to draw on the canvas.
 To stop drawing, separate your fingers or move your hand out of the frame.
 Erasing:
 
-To erase, form a closed fist or move your thumb and index finger far apart.
+Form a closed fist or move your thumb and index finger far apart.
 Move your hand over the area you want to erase.
 Tips for Best Performance
-Lighting: Ensure you have adequate lighting for the webcam to clearly capture your hand movements.
+Lighting: Ensure adequate lighting for the webcam to clearly capture your hand movements.
 Positioning: Keep your hand within the webcam’s frame for consistent tracking. The system will attempt to interpolate if your hand briefly moves out of frame, but continuous detection is ideal.
 Hand Gestures: The system primarily relies on the distance between the index finger and thumb. Practice the gestures to understand how the system responds.
 Troubleshooting
-Tracking Issues: If the hand tracking seems unstable, try adjusting the lighting or the position of your hand relative to the webcam.
+Tracking Issues: Adjust lighting or the position of your hand relative to the webcam if tracking is unstable.
 Lagging: If the application is lagging, consider reducing the resolution of the webcam feed or closing other applications to free up system resources.
-Broken Lines: If lines are breaking during fast movements, check that your webcam is not dropping frames and that your system can handle real-time video processing.
+Broken Lines: If lines are breaking during fast movements, ensure your webcam is not dropping frames and that your system can handle real-time video processing.
 Future Improvements
-Enhanced Gesture Recognition: Add more gestures for additional functionalities such as changing colors or brush sizes.
+Enhanced Gesture Recognition: Add more gestures for additional functionalities, such as changing colors or brush sizes.
 Undo/Redo Functionality: Implement an undo/redo stack for better user control.
 Save/Load Drawings: Allow users to save their drawings to a file or load a previous session.
 Contributing
-If you would like to contribute to this project, please fork the repository and submit a pull request. For any major changes, please open an issue to discuss what you would like to change.
+Contributions are welcome! If you'd like to contribute to this project:
+
+Fork the repository.
+Create a new branch (git checkout -b feature-branch).
+Make your changes.
+Commit your changes (git commit -m 'Add new feature').
+Push to the branch (git push origin feature-branch).
+Open a pull request.
+Please open an issue first to discuss what you would like to change.
 
 License
 This project is licensed under the MIT License. See the LICENSE file for details.
